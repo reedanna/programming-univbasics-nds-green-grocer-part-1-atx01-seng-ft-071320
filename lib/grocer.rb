@@ -22,7 +22,7 @@ def consolidate_cart(cart)
   cart.each do |item|
     if find_item_in_name_in_collection(item[:name], new_cart)
       #if it is already in the new cart
-      
+      new_cart.find {
     else
       #if it isn't in the new cart
       new_cart.unshift(item)
