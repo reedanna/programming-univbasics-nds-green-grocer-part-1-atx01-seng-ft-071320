@@ -24,8 +24,8 @@ def consolidate_cart(cart)
   cart.each do |item|
     if find_item_by_name_in_collection(item[:item], new_cart)
       #if it is already in the new cart
-      print new_item = item[:item]
-      #new_item_index = new_cart.find_index {|i| i == new_item}
+      new_item = item[:item]
+      print new_item_index = new_cart.find_index {|i| i == new_item}
       #new_cart[new_item_index][:count] += 1
     else
       #if it isn't in the new cart
