@@ -26,7 +26,7 @@ def consolidate_cart(cart)
     else
       #if it isn't in the new cart
       new_cart.push(item)
-      
+      new_cart.last
     end
   end
 end
