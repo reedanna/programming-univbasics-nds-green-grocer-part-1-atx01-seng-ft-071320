@@ -23,8 +23,13 @@ def consolidate_cart(cart)
     if find_item_by_name_in_collection(item[:item], new_cart) == nil
       #if it isn't in the new cart
       new_cart.unshift(item)
+      new_cart[0][:count] = 0
     end
     
+    new_cart.each do |new_item|
+      if new_item[:item] == item[:item]
+        new_item[:count] += 1
+      end
   end
   print new_cart
 end
