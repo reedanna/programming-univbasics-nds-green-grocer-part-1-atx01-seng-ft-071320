@@ -1,3 +1,5 @@
+require 'pry'
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -27,6 +29,7 @@ def consolidate_cart(cart)
       new_item = item[:name]
       new_item_index = new_cart.find {|i| i == new_item}
       new_cart[new_item_index][:count] += 1
+      pry.binding
     else
       #if it isn't in the new cart
       new_cart.unshift(item)
