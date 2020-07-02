@@ -25,8 +25,8 @@ def consolidate_cart(cart)
       
     else
       #if it isn't in the new cart
-      new_cart.push(item)
-      new_cart.last
+      new_cart.unshift(item)
+      new_cart[0][:count] = 1
     end
   end
 end
