@@ -30,6 +30,7 @@ def consolidate_cart(cart)
       if new_item[:item] == item[:item]
         new_item[:count] += 1
       end
+    end
   end
   print new_cart
 end
