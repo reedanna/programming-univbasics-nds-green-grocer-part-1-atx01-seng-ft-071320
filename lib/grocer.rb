@@ -27,6 +27,7 @@ def consolidate_cart(cart)
       new_cart.do |new_item|
         if new_item[:item] == item
           new_item[:count] +=1
+        end
       end
     else
       #if it isn't in the new cart
