@@ -26,7 +26,7 @@ def consolidate_cart(cart)
       #if it is already in the new cart
       new_item = item[:item]
       new_item_index = new_cart.find {|i| i == new_item}
-      new_cart[new_item_index][:count].to_s += 1
+      new_cart[new_item_index][:count].to_i += 1
     else
       #if it isn't in the new cart
       new_cart.unshift(item)
